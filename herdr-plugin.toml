@@ -1,0 +1,19 @@
+id = "portablelabs.murmur"
+name = "murmur"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Live org chart of your agents and subagents — status, tokens, cost, instructions and memory locations. Reads local state only; costs zero model tokens."
+platforms = ["linux", "macos", "windows"]
+
+# No build step on purpose: pure Node, zero dependencies, nothing to install.
+
+[[panes]]
+id = "murmur"
+title = "murmur"
+placement = "tab"
+# ponytail: the flags skip realpath. On Windows Herdr starts panes in a \\?\C:\... cwd and
+# Node's realpath dies on it (EISDIR lstat 'C:') before app.js runs. Drop them if Node fixes that.
+command = ["node", "--preserve-symlinks", "--preserve-symlinks-main", "src/app.js"]
+
+# ponytail: no [[actions]] block — Herdr already opens declared panes from its own
+# plugin menu, so an "open" action would be a second door to the same room.

@@ -1,0 +1,28 @@
+{
+  "_comment": "Health thresholds for murmur. All editable; the right numbers differ per person and repo. sessionScale multiplies volume thresholds (thrashing, expensive) for whole sessions, which are a day of work rather than a unit you tune.",
+  "thrashing": {
+    "toolCalls": 60
+  },
+  "flaky": {
+    "errorRate": 0.2,
+    "minUses": 5
+  },
+  "looping": {
+    "repeats": 3
+  },
+  "expensive": {
+    "costUsd": 2
+  },
+  "sprawl": {
+    "fanOut": 6,
+    "depth": 3
+  },
+  "compacting": {
+    "ctxPct": 80
+  },
+  "starved": {
+    "toolCalls": 3,
+    "costUsd": 0.05
+  },
+  "sessionScale": 8
+}

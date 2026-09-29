@@ -1,0 +1,13 @@
+{
+  "name": "herdr-murmur",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Herdr pane plugin: live org chart of agents and subagents, with tokens, cost and memory locations. Zero model tokens.",
+  "license": "Apache-2.0",
+  "bin": { "murmur": "src/app.js" },
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node src/herdr.js --selftest && node src/claude.js --selftest && node src/render.js --selftest && node src/skills.js --selftest && node src/lens.js --selftest && node src/context.js --selftest && node src/inventory.js --selftest && node src/app.js --selftest"
+  },
+  "engines": { "node": ">=18" }
+}

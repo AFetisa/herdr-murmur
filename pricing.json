@@ -1,0 +1,12 @@
+{
+  "_comment": "USD per 1M tokens. Cache write billed at 1.25x input, cache read at 0.1x input. Edit to match your plan/rates.",
+  "cacheWriteMultiplier": 1.25,
+  "cacheReadMultiplier": 0.1,
+  "models": {
+    "opus": { "in": 15, "out": 75, "ctx": 200000 },
+    "sonnet": { "in": 3, "out": 15, "ctx": 200000 },
+    "haiku": { "in": 1, "out": 5, "ctx": 200000 },
+    "fable": { "in": 3, "out": 15, "ctx": 200000 }
+  },
+  "default": "sonnet"
+}
